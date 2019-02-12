@@ -3,8 +3,9 @@ import { Router } from '@reach/router';
 import { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 
-import DrumKit from './challenges/drumkit';
-import Clock from './challenges/clock';
+import DrumKit from './challenges/Drumkit';
+import Clock from './challenges/Clock';
+import FlexPanel from './challenges/FlexPanel';
 import NavBar from './NavBar';
 import Home from './Home';
 
@@ -33,6 +34,11 @@ const challenges = [
     Component: Clock,
     path: '/clock',
     name: 'Clock',
+  },
+  {
+    Component: FlexPanel,
+    path: '/flex-panel',
+    name: 'Flex Panel',
   },
 ];
 
