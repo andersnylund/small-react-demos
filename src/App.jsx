@@ -1,9 +1,10 @@
 import React from 'react';
-import { Router, Link } from '@reach/router';
+import { Router } from '@reach/router';
 import { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 
 import DrumKit from './challenges/drumkit';
+import Clock from './challenges/clock';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -21,9 +22,9 @@ const GlobalStyle = createGlobalStyle`
 const App = () => (
   <>
     <GlobalStyle />
-    <Link to="/drumkit">Drumkit</Link>
     <Router>
       <DrumKit path="/drumkit" />
+      <Clock path="/clock" />
     </Router>
   </>
 );
