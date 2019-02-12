@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - var(--navbar-height));
 `;
 
 const ClockFrame = styled.div`
@@ -27,7 +27,7 @@ const Hand = styled.div`
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
   position: absolute;
   right: 50%;
-  bottom: 50%;
+  bottom: calc(50% - var(--navbar-height) / 2); /* Find out why */
 `;
 
 const Clock = () => {
