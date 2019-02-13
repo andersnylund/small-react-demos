@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
+import 'typeface-amatic-sc';
 
 import DrumKit from './challenges/Drumkit';
 import Clock from './challenges/Clock';
