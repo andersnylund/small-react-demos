@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Panel from './Panel';
 
 const Container = styled.div`
-  height: calc(100vh - var(--navbar-height));
+  height: 100%;
   display: flex;
 `;
 

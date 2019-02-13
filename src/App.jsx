@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 import 'typeface-amatic-sc';
 
@@ -20,9 +20,21 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --navbar-height: 3rem;
   }
+`;
 
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
+
+const Content = styled.div`
+  flex-grow: 1;
+`;
+
+const StyledRouter = styled(Router)`
+  height: 100%;
 `;
 
 const challenges = [
@@ -46,13 +58,17 @@ const challenges = [
 const App = () => (
   <>
     <GlobalStyle />
-    <NavBar challenges={challenges} />
-    <Router>
-      <Home path="/" />
-      {challenges.map(({ Component, path, name }) => (
-        <Component path={path} key={name} />
-      ))}
-    </Router>
+    <Layout>
+      <NavBar challenges={challenges} />
+      <Content>
+        <StyledRouter>
+          <Home path="/" />
+          {challenges.map(({ Component, path, name }) => (
+            <Component path={path} key={name} />
+          ))}
+        </StyledRouter>
+      </Content>
+    </Layout>
   </>
 );
 

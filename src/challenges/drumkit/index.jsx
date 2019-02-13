@@ -5,8 +5,7 @@ import Instrument from './Instrument';
 const Wrapper = styled.div`
   background: url('https://i.imgur.com/b9r5sEL.jpg') bottom center;
   background-size: cover;
-  height: calc(100vh - var(--navbar-height));
-  width: 100vw;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;

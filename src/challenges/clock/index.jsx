@@ -7,14 +7,18 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - var(--navbar-height));
+  height: 100%;
 `;
 
 const ClockFrame = styled.div`
+  position: absolute;
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
   border: 0.5rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Hand = styled.div`
@@ -26,8 +30,8 @@ const Hand = styled.div`
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
   position: absolute;
-  right: 50%;
-  bottom: calc(50% - var(--navbar-height) / 2); /* Find out why */
+  bottom: 50%;
+  left: 50%;
 `;
 
 const Clock = () => {

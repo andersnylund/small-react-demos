@@ -5,22 +5,24 @@ import { shape, arrayOf, string } from 'prop-types';
 
 const Wrapper = styled.div`
   display: flex;
-  height: var(--navbar-height);
   text-transform: uppercase;
   align-items: center;
+  justify-content: baseline;
 
   a {
     text-decoration: none;
+    transition: all 0.5s ease;
     color: inherit;
     padding: 1rem;
     :hover {
-      text-decoration: underline;
+      background: #eee;
     }
   }
 `;
 
 const HomeLink = styled(Link)`
   flex: 1;
+  font-size: 2rem;
 `;
 
 const NavBar = ({ challenges }) => {
