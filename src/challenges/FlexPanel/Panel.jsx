@@ -5,15 +5,20 @@ import { string } from 'prop-types';
 const StyledPanel = styled.div`
   background-image: url(${props => props.background});
   background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(107, 15, 156);
   background-origin: padding-box;
   background-position: 50% 50%;
   background-position-x: 50%;
   background-position-y: 50%;
   background-repeat: repeat;
-  border: 0.3rem solid rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 5px inset;
+
+  overflow: hidden;
 
   color: white;
-  font-size: 5rem;
+  font-size: ${props => (props.isSelected ? '7rem' : '5rem')};
   font-family: Amatic SC, cursive;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   text-transform: uppercase;
@@ -22,21 +27,24 @@ const StyledPanel = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: ${props => (props.isSelected ? 'space-around' : 'center')};
+  justify-content: space-around;
+
   align-items: center;
 
   transition: all 0.5s ease;
 `;
 
 const Top = styled.div`
+  font-size: 5rem;
   transition: all 0.5s ease;
-  position: ${props => (props.isSelected ? 'inherit' : 'absolute')};
-  top: ${props => (props.isSelected ? 'inherit' : '-100%')};
+  transition-delay: 0.3s;
+  transform: ${props => (props.isSelected ? '' : 'translateY(-200%)')};
 `;
 const Bottom = styled.div`
+  font-size: 5rem;
   transition: all 0.5s ease;
-  position: ${props => (props.isSelected ? 'inherit' : 'absolute')};
-  bottom: ${props => (props.isSelected ? 'inherit' : '100%')};
+  transition-delay: 0.3s;
+  transform: ${props => (props.isSelected ? '' : 'translateY(200%)')};
 `;
 
 const Panel = ({ top, middle, bottom, background }) => {
