@@ -3,11 +3,11 @@ import { Link } from '@reach/router';
 import styled from 'styled-components';
 import { shape, arrayOf, string } from 'prop-types';
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
   display: flex;
   text-transform: uppercase;
   align-items: center;
-  justify-content: baseline;
+  justify-content: center;
 
   a {
     text-decoration: none;
@@ -22,17 +22,28 @@ const Wrapper = styled.div`
 
 const HomeLink = styled(Link)`
   flex: 1;
+`;
+
+const Home = styled.div`
   font-size: 2rem;
+`;
+
+const ChallengeLink = styled(Link)`
+  display: flex;
+  height: 100%;
+  align-items: center;
 `;
 
 const NavBar = ({ challenges }) => {
   return (
     <Wrapper>
-      <HomeLink to="/">/</HomeLink>
+      <HomeLink to="/">
+        <Home>/</Home>
+      </HomeLink>
       {challenges.map(({ name, path }) => (
-        <Link to={path} key={name}>
-          {name}
-        </Link>
+        <ChallengeLink to={path} key={name}>
+          <div>{name}</div>
+        </ChallengeLink>
       ))}
     </Wrapper>
   );
