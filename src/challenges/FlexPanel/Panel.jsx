@@ -38,13 +38,13 @@ const Top = styled.div`
   font-size: 5rem;
   transition: all 0.5s ease;
   transition-delay: 0.3s;
-  transform: ${props => (props.isSelected ? '' : 'translateY(-200%)')};
+  transform: ${props => (props.isSelected ? '' : 'translateY(-300%)')};
 `;
 const Bottom = styled.div`
   font-size: 5rem;
   transition: all 0.5s ease;
   transition-delay: 0.3s;
-  transform: ${props => (props.isSelected ? '' : 'translateY(200%)')};
+  transform: ${props => (props.isSelected ? '' : 'translateY(300%)')};
 `;
 
 const Panel = ({ top, middle, bottom, background }) => {
