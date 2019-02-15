@@ -10,10 +10,6 @@ const Wrapper = styled.section`
   height: 100%;
 `;
 
-const Button = styled.button`
-  visibility: ${props => (props.open ? 'hidden' : '')};
-`;
-
 const PosedDialog = posed.div({
   hoverable: true,
   open: {
@@ -48,6 +44,8 @@ const DialogContent = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  width: 80%;
+  color: #555;
 `;
 
 const Triangle = styled.div`
@@ -55,13 +53,8 @@ const Triangle = styled.div`
   font-size: 2rem;
 `;
 
-const Text = styled.div`
-  color: #555;
-  span {
-    display: block;
-    font-size: 1.5rem;
-  }
-  width: 75%;
+const LargeText = styled.div`
+  font-size: 1.5rem;
 `;
 
 const Dismiss = styled.div`
@@ -80,20 +73,23 @@ const ErrorMessage = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Wrapper>
+    <Wrapper onClick={() => setOpen(true)}>
       <Dialog pose={open ? 'open' : 'closed'}>
         <DialogContent>
           <Triangle>!</Triangle>
-          <Text>
-            <span>Oh snap!</span>
-            An error has occurred while creating an error report.
-          </Text>
+          <LargeText>Oh snap!</LargeText>
+          <div>An error has occurred while creating an error report.</div>
         </DialogContent>
-        <Dismiss onClick={() => setOpen(false)}>Dismiss</Dismiss>
+        <Dismiss
+          onClick={e => {
+            e.stopPropagation();
+            setOpen(false);
+          }}
+        >
+          Dismiss
+        </Dismiss>
       </Dialog>
-      <Button type="button" onClick={() => setOpen(true)} open={open}>
-        Open dialog
-      </Button>
+      Click anywhere to open dialog
     </Wrapper>
   );
 };
