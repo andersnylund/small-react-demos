@@ -4,9 +4,10 @@ import styled, { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 import 'typeface-amatic-sc';
 
-import DrumKit from './challenges/Drumkit';
+import DrumKit from './challenges/DrumKit';
 import Clock from './challenges/Clock';
 import FlexPanel from './challenges/FlexPanel';
+import ErrorMessage from './challenges/ErroMessage';
 import NavBar from './NavBar';
 import Home from './Home';
 
@@ -40,8 +41,8 @@ const StyledRouter = styled(Router)`
 const challenges = [
   {
     Component: DrumKit,
-    path: '/drumkit',
-    name: 'Drumkit',
+    path: '/drum-kit',
+    name: 'Drum kit',
   },
   {
     Component: Clock,
@@ -52,6 +53,11 @@ const challenges = [
     Component: FlexPanel,
     path: '/flex-panel',
     name: 'Flex Panel',
+  },
+  {
+    Component: ErrorMessage,
+    path: '/error-message',
+    name: 'Error Message',
   },
 ];
 
