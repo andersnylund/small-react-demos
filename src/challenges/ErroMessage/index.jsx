@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import posed from 'react-pose';
 
 const Wrapper = styled.section`
   display: flex;
@@ -13,24 +14,20 @@ const Button = styled.button`
   visibility: ${props => (props.open ? 'hidden' : '')};
 `;
 
-const Dialog = styled.div`
-  @keyframes open {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+const PosedDialog = posed.div({
+  hoverable: true,
+  open: {
+    scale: 1,
+  },
+  closed: {
+    scale: 0,
+  },
+  hover: {
+    scale: 1.1,
+  },
+});
 
-  animation-duration: 0.5s;
-  animation-name: open;
-
-  /* transition: transform 0.3s cubic-bezier(0.62, 0.35, 0.48, 1.4);
-  transform: scale(${props => (props.open ? '1' : '0')}); */
+const Dialog = styled(PosedDialog)`
   margin: 2rem;
   height: 15rem;
   width: 20rem;
@@ -84,7 +81,7 @@ const ErrorMessage = () => {
 
   return (
     <Wrapper>
-      <Dialog open={open}>
+      <Dialog pose={open ? 'open' : 'closed'}>
         <DialogContent>
           <Triangle>!</Triangle>
           <Text>
