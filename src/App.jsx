@@ -4,8 +4,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 import 'typeface-amatic-sc';
 
-import DrumKit from './challenges/DrumKit';
-import Clock from './challenges/Clock';
+import DrumKit from './challenges/drumkit';
+import Clock from './challenges/clock';
 import FlexPanel from './challenges/FlexPanel';
 import ErrorMessage from './challenges/ErroMessage';
 import NavBar from './NavBar';

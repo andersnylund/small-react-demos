@@ -26,6 +26,7 @@ const HomeLink = styled(Link)`
 
 const Home = styled.div`
   font-size: 2rem;
+  text-transform: lowercase;
 `;
 
 const ChallengeLink = styled(Link)`
@@ -38,7 +39,7 @@ const NavBar = ({ challenges }) => {
   return (
     <Wrapper>
       <HomeLink to="/">
-        <Home>/</Home>
+        <Home>/home 🏡</Home>
       </HomeLink>
       {challenges.map(({ name, path }) => (
         <ChallengeLink to={path} key={name}>

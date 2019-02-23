@@ -34,16 +34,16 @@ const Footer = styled.footer`
 const Home = () => (
   <Wrapper>
     <Content pose="after" initialPose="before">
-      <h1>JavaScript30 With React</h1>
-      <p>Small stuff built by me with the aim to learn CSS</p>
+      <h1>Small React Demos</h1>
+      <p>Stuff built by me with the aim to learn CSS ✨</p>
       <p>
         Ideas are from <a href="https://javascript30.com/">JavaScript30</a>{' '}
-        course and <a href="https://100dayscss.com/">100 Days CSS Challenge</a>{' '}
+        course and <a href="https://100dayscss.com/">100 Days CSS Challenge</a>
       </p>
     </Content>
     <Footer>
       <a href="https://www.github.com/andersnylund/javascript30-with-react">
-        Anders Nylund
+        Made with 💙 by Anders Nylund
       </a>
     </Footer>
   </Wrapper>
