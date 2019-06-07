@@ -35,15 +35,26 @@ const Home = () => (
   <Wrapper>
     <Content pose="after" initialPose="before">
       <h1>Small React Demos</h1>
-      <p>Stuff built by me with the aim to learn CSS ✨</p>
       <p>
-        Ideas are from <a href="https://javascript30.com/">JavaScript30</a>{' '}
-        course and <a href="https://100dayscss.com/">100 Days CSS Challenge</a>
+        Stuff built by me with the aim to learn CSS&nbsp;
+        <span role="img" aria-label="stars">
+          ✨
+        </span>
+      </p>
+      <p>
+        Ideas are from&nbsp;
+        <a href="https://javascript30.com/">JavaScript30</a>
+        &nbsp;course and&nbsp;
+        <a href="https://100dayscss.com/">100 Days CSS Challenge</a>
       </p>
     </Content>
     <Footer>
       <a href="https://www.github.com/andersnylund/javascript30-with-react">
-        Made with 💙 by Anders Nylund
+        Made with&nbsp;
+        <span role="img" aria-label="blue-hearth">
+          💙
+        </span>
+        by Anders Nylund
       </a>
     </Footer>
   </Wrapper>

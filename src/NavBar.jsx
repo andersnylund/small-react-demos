@@ -39,7 +39,12 @@ const NavBar = ({ challenges }) => {
   return (
     <Wrapper>
       <HomeLink to="/">
-        <Home>/home 🏡</Home>
+        <Home>
+          /home&nbsp;
+          <span role="img" aria-label="home">
+            🏡
+          </span>
+        </Home>
       </HomeLink>
       {challenges.map(({ name, path }) => (
         <ChallengeLink to={path} key={name}>
