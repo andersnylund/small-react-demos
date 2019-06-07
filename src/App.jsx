@@ -7,7 +7,7 @@ import 'typeface-amatic-sc';
 import DrumKit from './challenges/drumkit';
 import Clock from './challenges/clock';
 import FlexPanel from './challenges/FlexPanel';
-import ErrorMessage from './challenges/ErroMessage';
+import ErrorMessage from './challenges/ErrorMessage';
 import NavBar from './NavBar';
 import Home from './Home';
 
