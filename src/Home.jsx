@@ -42,6 +42,9 @@ const Home = () => (
         </span>
       </p>
       <p>
+        <span role="img" aria-label="light bulb">
+          💡
+        </span>
         Ideas are from&nbsp;
         <a href="https://javascript30.com/">JavaScript30</a>
         &nbsp;course and&nbsp;

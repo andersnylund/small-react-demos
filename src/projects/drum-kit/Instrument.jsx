@@ -5,7 +5,7 @@ import { string } from 'prop-types';
 
 import sounds from './sounds';
 
-const isPlaying = `
+const isPlayingStyle = `
   transform: scale(1.1);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
@@ -21,7 +21,7 @@ const Button = styled.button`
   background: rgba(0, 0, 0, 0.4);
   padding: 0.5rem;
 
-  ${props => (props.isPlaying ? isPlaying : '')}
+  ${props => (props.isPlaying ? isPlayingStyle : '')}
 `;
 
 const Key = styled.div`
