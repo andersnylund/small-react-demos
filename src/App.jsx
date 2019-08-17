@@ -4,10 +4,10 @@ import styled, { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 import 'typeface-amatic-sc';
 
-import DrumKit from './challenges/drumkit';
-import Clock from './challenges/clock';
-import FlexPanel from './challenges/FlexPanel';
-import ErrorMessage from './challenges/ErrorMessage';
+import DrumKit from './projects/drumkit';
+import Clock from './projects/clock';
+import FlexPanel from './projects/FlexPanel';
+import ErrorMessage from './projects/ErrorMessage';
 import NavBar from './NavBar';
 import Home from './Home';
 
@@ -38,7 +38,7 @@ const StyledRouter = styled(Router)`
   height: 100%;
 `;
 
-const challenges = [
+const projects = [
   {
     Component: DrumKit,
     path: '/drum-kit',
@@ -65,11 +65,11 @@ const App = () => (
   <>
     <GlobalStyle />
     <Layout>
-      <NavBar challenges={challenges} />
+      <NavBar projects={projects} />
       <Content>
         <StyledRouter>
           <Home path="/" />
-          {challenges.map(({ Component, path, name }) => (
+          {projects.map(({ Component, path, name }) => (
             <Component path={path} key={name} />
           ))}
         </StyledRouter>

@@ -35,7 +35,7 @@ const ChallengeLink = styled(Link)`
   align-items: center;
 `;
 
-const NavBar = ({ challenges }) => {
+const NavBar = ({ projects }) => {
   return (
     <Wrapper>
       <HomeLink to="/">
@@ -46,7 +46,7 @@ const NavBar = ({ challenges }) => {
           </span>
         </Home>
       </HomeLink>
-      {challenges.map(({ name, path }) => (
+      {projects.map(({ name, path }) => (
         <ChallengeLink to={path} key={name}>
           <div>{name}</div>
         </ChallengeLink>
@@ -56,7 +56,7 @@ const NavBar = ({ challenges }) => {
 };
 
 NavBar.propTypes = {
-  challenges: arrayOf(
+  projects: arrayOf(
     shape({
       name: string.isRequired,
       path: string.isRequired,
