@@ -18,6 +18,8 @@ const Wrapper = styled.nav`
       background: #eee;
     }
   }
+  box-shadow: 0px 0px 20px 0px hsl(0, 0%, 50%);
+  z-index: 1;
 `;
 
 const HomeLink = styled(Link)`
